@@ -1,0 +1,56 @@
+<!DocType html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="HTML,JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dropdown</title>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			.hide{display:none;}
+			.hide1{display:none;}
+			.hide2{display:none;}
+			ul{list-style:none;width:20%;padding:10px 0px;margin-top:-15px;}
+			a{text-decoration:none;}
+			#dd{border:2px outset black;cursor:pointer;width:20%;margin-bottom:0px;border-radius:5px;background-color:gray;position:relative;}
+			li{border-bottom:2px solid black;padding:10px;border-left:2px solid black;border-right:2px solid black;}
+			i{position:absolute;right:0;padding:0px 5px;}
+		</style>
+	
+	</head>
+	
+	<body>
+	<section>
+		<div>
+			<p id="dd">Dropdown <i id="icon" class="fa fa-sort-desc"></i> <i id="icon1" class="fa fa-sort-asc"></i> </p>
+			<ul id="list" class="hide">
+				<li><a href="#">One</a></li>
+				<li><a href="#">Two</a></li>
+				<li><a href="#">Three</a></li>
+				<li><a href="#">Four</a></li>
+			</ul>
+		</div>
+	
+	</section>
+	
+	<script>
+		var dd=document.getElementById("dd");
+		var list=document.getElementById("list");
+		var icon=document.getElementById("icon");
+		var icon1=document.getElementById("icon1");
+		icon1.classList.add("hide2");
+		dd.addEventListener("click",function(){
+			list.classList.toggle("hide");
+			icon.classList.toggle("hide1");
+			icon1.classList.toggle("hide2");
+		});
+		list.addEventListener("click",function(){
+			list.classList.toggle("hide"); 
+			icon.classList.toggle("hide1");
+			icon1.classList.toggle("hide2");
+		});
+			
+	</script>
+	</body>
+</html>
